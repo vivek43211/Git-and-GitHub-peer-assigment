@@ -1,1 +1,31 @@
+``` javascript
+onst objects = {
+    username :"vivek",
+    cousre : "js",
+    signIn : true,
+    getdata : function(){
+        console.log("get ur data")
+        console.log(`username : ${this.username}`)
+        console.log(this) // refer to current contents  
+    }
+}
+console.log(user.username);
+console.log(user.getdata());
+console.log(this) // {}empty  = its global scope 
 
+
+function user ( username, cousre , isLogged){
+    this.username = username;
+    this.cousre = cousre;
+    this.isLogged = isLogged;
+    this.getdata = function(){
+        console.log(`welcome : ${username}`)
+    }
+    return this
+}
+
+const userone = new  user("vivek","js",ture);
+const usertwo = new  user ("rahul","c++",false);
+console.log(userone)
+console.log(usertwo)
+```
